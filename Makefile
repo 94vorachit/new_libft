@@ -6,7 +6,7 @@
 #    By: vorhansa <vorhansa@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/28 01:52:51 by vorhansa          #+#    #+#              #
-#    Updated: 2026/02/27 04:33:56 by vorhansa         ###   ########.fr        #
+#    Updated: 2026/03/04 14:07:01 by vorhansa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,6 +55,9 @@ SRC 	= ft_bzero.c \
 	ft_lstsize.c	\
 	ft_lstlast.c	\
 	ft_lstdelone.c	\
+	ft_lstclear.c	\
+	ft_lstiter.c	\
+	ft_lstmap.c		\
 	
 OBJ_DIR	= obj
 OBJ = $(addprefix $(OBJ_DIR)/, $(SRC:.c=.o))
