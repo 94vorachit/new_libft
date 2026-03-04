@@ -53,62 +53,62 @@ static void	clear_list(t_list **head)
 	}
 }
 
-int	main(void)
-{
-	t_list	*head;
-	t_list	*node;
-	t_list	*prev;
-	t_list	*tail_prev;
+// int	main(void)
+// {
+// 	t_list	*head;
+// 	t_list	*node;
+// 	t_list	*prev;
+// 	t_list	*tail_prev;
 
-	head = NULL;
-	node = new_int_node(10);
-	if (!node)
-		return (1);
-	ft_lstadd_back(&head, node);
-	node = new_int_node(20);
-	if (!node)
-		return (clear_list(&head), 1);
-	ft_lstadd_back(&head, node);
-	node = new_int_node(30);
-	if (!node)
-		return (clear_list(&head), 1);
-	ft_lstadd_back(&head, node);
-	node = new_int_node(40);
-	if (!node)
-		return (clear_list(&head), 1);
-	ft_lstadd_back(&head, node);
+// 	head = NULL;
+// 	node = new_int_node(10);
+// 	if (!node)
+// 		return (1);
+// 	ft_lstadd_back(&head, node);
+// 	node = new_int_node(20);
+// 	if (!node)
+// 		return (clear_list(&head), 1);
+// 	ft_lstadd_back(&head, node);
+// 	node = new_int_node(30);
+// 	if (!node)
+// 		return (clear_list(&head), 1);
+// 	ft_lstadd_back(&head, node);
+// 	node = new_int_node(40);
+// 	if (!node)
+// 		return (clear_list(&head), 1);
+// 	ft_lstadd_back(&head, node);
 
-	printf("initial size = %d\n", ft_lstsize(head));
-	print_list(head);
+// 	printf("initial size = %d\n", ft_lstsize(head));
+// 	print_list(head);
 
-	printf("\nDelete middle node (value 20):\n");
-	prev = head;
-	node = head->next;
-	prev->next = node->next;
-	ft_lstdelone(node, del_int);
-	printf("size = %d\n", ft_lstsize(head));
-	print_list(head);
+// 	printf("\nDelete middle node (value 20):\n");
+// 	prev = head;
+// 	node = head->next;
+// 	prev->next = node->next;
+// 	ft_lstdelone(node, del_int);
+// 	printf("size = %d\n", ft_lstsize(head));
+// 	print_list(head);
 
-	printf("\nDelete head node:\n");
-	node = head;
-	head = head->next;
-	ft_lstdelone(node, del_int);
-	printf("size = %d\n", ft_lstsize(head));
-	print_list(head);
+// 	printf("\nDelete head node:\n");
+// 	node = head;
+// 	head = head->next;
+// 	ft_lstdelone(node, del_int);
+// 	printf("size = %d\n", ft_lstsize(head));
+// 	print_list(head);
 
-	printf("\nDelete tail node:\n");
-	tail_prev = head;
-	while (tail_prev->next && tail_prev->next->next)
-		tail_prev = tail_prev->next;
-	node = tail_prev->next;
-	tail_prev->next = NULL;
-	ft_lstdelone(node, del_int);
-	printf("size = %d\n", ft_lstsize(head));
-	print_list(head);
+// 	printf("\nDelete tail node:\n");
+// 	tail_prev = head;
+// 	while (tail_prev->next && tail_prev->next->next)
+// 		tail_prev = tail_prev->next;
+// 	node = tail_prev->next;
+// 	tail_prev->next = NULL;
+// 	ft_lstdelone(node, del_int);
+// 	printf("size = %d\n", ft_lstsize(head));
+// 	print_list(head);
 
-	printf("\nCleanup remaining list with ft_lstdelone:\n");
-	clear_list(&head);
-	printf("final size = %d\n", ft_lstsize(head));
-	print_list(head);
-	return (0);
-}
+// 	printf("\nCleanup remaining list with ft_lstdelone:\n");
+// 	clear_list(&head);
+// 	printf("final size = %d\n", ft_lstsize(head));
+// 	print_list(head);
+// 	return (0);
+// }
